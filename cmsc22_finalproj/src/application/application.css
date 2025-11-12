@@ -1,6 +1,47 @@
+@font-face{
+	src: url(fonts/nine0.ttf);
+}
+
 .border-pane {
     -fx-background-image: url("images/background_welcomescreen.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+}
+
+.text-field{
+	-fx-font-size: 24px;
+	-fx-font-family: "Nine By Five NBP";
+	-fx-padding: 2 8 2 8;  /* -fx-padding: top right bottom left  */
+	-fx-background-color: #ffbbba;
+	-fx-prompt-text-fill: #5b5b5b;
+	-fx-background-radius: 20px;
+	-fx-border-color: black;
+	-fx-border-width: 3px;
+	-fx-border-radius: 20px;
+}
+
+.login-button{
+	-fx-font-size: 24px;
+	-fx-font-family: "Nine By Five NBP";
+	-fx-text-fill: black;
+	-fx-font-weight: bold;
+	-fx-background-color: #8c0300;
+	-fx-background-radius: 20px;
+	-fx-border-color: black;
+	-fx-border-width: 3px;
+	-fx-border-radius: 20px;
+}
+
+.signup-label{
+	-fx-font-size: 20px;
+	-fx-font-family: "Nine by Five NBP";
+	-fx-text-fill: black;
+}
+
+.signup-link{
+	-fx-font-size: 20px;
+	-fx-font-family: "Nine by Five NBP";
+	-fx-text-fill: #8c0300;
+	-fx-padding: 0 0 0 0;
 }
