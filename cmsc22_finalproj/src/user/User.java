@@ -21,7 +21,7 @@ public abstract class User {
 		this.location = location;
 	}
 	
-	public abstract void login();
+	public abstract void login(String username, String password);
 	public abstract void viewDetails();
 	public abstract void changeDisplayName(String displayName);
 	public abstract void changeLocation(String location);
