@@ -1,11 +1,11 @@
 package user;
 
 public abstract class User {
-	String username;
-	String password;
-	String displayName;
-	Double balance;
-	String location;
+	private String username;
+	private String password;
+	private String displayName;
+	private double balance;
+	private String location;
 	
 	public User(String username, String password, String displayName, double balance, String location) {
 		this.username = username;
@@ -17,6 +17,6 @@ public abstract class User {
 	
 	public abstract void login();
 	public abstract void viewDetails();
-	public abstract void changeDisplayName();
-	public abstract void changeLocation();
+	public abstract void changeDisplayName(String displayName);
+	public abstract void changeLocation(String location);
 }
