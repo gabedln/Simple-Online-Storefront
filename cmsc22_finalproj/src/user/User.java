@@ -8,25 +8,16 @@
 
 package user;
 
-import java.util.Scanner;
-import java.util.ArrayList;
-import user.Buyer;
-import user.Seller;
-
 public abstract class User {
 	
-	private static Scanner sc = new Scanner(System.in);
-	
-	private String firstName;
-	private String lastName;
+	private String displayName;
 	private String username;
 	private String password;
 	private float balance;
 	private String location;
 	
-	public User(String firstName, String lastName, String username, String password, float balance, String location) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+	public User(String displayName, String username, String password, float balance, String location) {
+		this.displayName = displayName;
 		this.username = username;
 		this.password = password;
 		this.balance = balance;
@@ -35,90 +26,21 @@ public abstract class User {
 	
 	public abstract void displayDashboard();
 	
-	public void viewProfile() {
-		System.out.println("Name: " + firstName + " " + lastName);
-		System.out.println("Balance: " + balance);
-		System.out.println("Location: " + location);
-		
-		// options
-		System.out.println("[1] Change display name");
-		System.out.println("[2] Change location ");
-		System.out.println("[3] Back");
-		
-		int profileChoice = sc.nextInt();
-		sc.nextLine();
-		
-		if(profileChoice == 1) {
-			changeDisplayName();
-		}
-		else if(profileChoice == 2) {
-			changeLocation();
-		}
-		else if(profileChoice == 3) {
-			displayDashboard();
-		}
-	}
 	
 	public void changeDisplayName() {
-		System.out.println("Enter your new display name: ");
-		String newUsername = sc.nextLine();
-		
-		System.out.println("Enter your password to confirm");
-		String validateUname = sc.nextLine();
-		
-		if(this.getPassword().equals(validateUname)) {
-			this.username = newUsername;
-			System.out.println("Username successfully updated");
-			viewProfile();
-		}
-		
-		System.out.println("Incorrect password. Username failed to change");
-		viewProfile();
+
 	}
 	
 	public void changeLocation() {
-		System.out.println("Enter your new location: ");
-		String newLocation = sc.nextLine();
-		
-		System.out.println("Enter your password to confirm");
-		String validateUname = sc.nextLine();
-		
-		if(this.getPassword().equals(validateUname)) {
-			this.location = newLocation;
-			System.out.println("Location successfully updated");
-			viewProfile();
-		}
-		
-		System.out.println("Incorrect password. Location failed to change");
-		viewProfile();
 	}
 	
 	
-	public String getName() {
-		return this.username;
-	}
-	
-	public String getPassword() {
-		return this.password;
-	}
-	
-	public String getUsername() {
-		return this.username;
-	}
-	
-	public String getLocation() {
-		return this.location;
-	}
-	
-	public float getBalance() {
-	    return this.balance;
-	}
-
-	public void setBalance(float balance) {
-	    this.balance = balance;
-	}
-
-
-
+	public String getDisplayName() { return this.displayName; }
+	public String getName() { return this.username; }
+	public String getPassword() { return this.password; }
+	public String getUsername() { return this.username; }
+	public String getLocation() { return this.location; }
+	public float getBalance() { return this.balance; }
+	public void setBalance(float balance) { this.balance = balance; }
 
 }
