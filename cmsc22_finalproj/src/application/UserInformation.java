@@ -134,10 +134,9 @@ public class UserInformation {
             root.setCenter(editPane);
         });
         
-      //  logout.setOnAction(e-> {
-      //  	Main login = new Main();
-      // 	stage.setScene(login.getScene());
-      //  });
+        logout.setOnAction(e-> {
+        	stage.setScene(Main.getLoginScene());
+        });
 
         root.setCenter(grid);
         root.setBottom(backButton);
