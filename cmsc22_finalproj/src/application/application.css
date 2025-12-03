@@ -2,12 +2,14 @@
 	src: url(fonts/nine0.ttf);
 }
 
+/* --- SELLER & STOREFRONT STYLES --- */
 .seller-storefront {
     -fx-background-image: url("images/background_seller_storefront.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
 }
+
 .root-border-pane {
     -fx-background-image: url("images/background_welcomescreen.png");
     -fx-background-size: cover;
@@ -23,24 +25,24 @@
 }
 
 .welcome-border-pane{
-	-fx-background-image: url("images/welcome_screen.png");
-	-fx-background-size: cover;
-	-fx-background-repeat: no-repeat;
-	-fx-background-position: center;
+    -fx-background-image: url("images/welcome_screen.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
 }
 
 .sellerscreen_initial{
-	-fx-background-image: url("images/sellerscreen_initial.png");
-	-fx-background-size: cover;
-	-fx-background-repeat: no-repeat;
-	-fx-background-position: center;
+    -fx-background-image: url("images/sellerscreen_initial.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
 }
 
 .add-product{
-	-fx-background-image: url("images/add_product.png");
-	-fx-background-size: cover;
-	-fx-background-repeat: no-repeat;
-	-fx-background-position: center;
+    -fx-background-image: url("images/add_product.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
 }
 
 .add-voucher {
@@ -72,234 +74,236 @@
 }
 
 .user-info{
-	-fx-background-image: url("images/user_information.png");
-	-fx-background-size: cover;
-	-fx-background-position: center;
-	-fx-background-repeat: no-repeat;
+    -fx-background-image: url("images/user_information.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
 }
 
 .seller-voucher{
-	-fx-background-image:url("images/viewvoucher_background.png");
-	-fx-background-size: cover;
-	-fx-background-position: center;
-	-fx-background-repeat: no-repeat;
+    -fx-background-image:url("images/viewvoucher_background.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
 }
 
+/* --- BUTTONS & FIELDS --- */
+
 .product-back-button{
-	-fx-font-size: 26px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #eec260;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 26px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #eec260;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .product-combo-box {
-	-fx-font-size: 30px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-padding: 2 8 2 8;
-	-fx-border-width: 3px;
-	-fx-border-color: black;
-	-fx-background-color: #fdd060;
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
+    -fx-font-size: 30px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-padding: 2 8 2 8;
+    -fx-border-width: 3px;
+    -fx-border-color: black;
+    -fx-background-color: #fdd060;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
 }
 
 .add-button{
-	-fx-font-size: 26px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #8c0300;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 26px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #8c0300;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .confirm-button{
-	-fx-font-size: 20px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #8c0300;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 20px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #8c0300;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .text-field{
-	-fx-font-size: 21px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-padding: 2 8 2 8;
-	-fx-background-color: #ffbbba;
-	-fx-prompt-text-fill: #5b5b5b;
-	-fx-background-radius: 20px;
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 21px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-padding: 2 8 2 8;
+    -fx-background-color: #ffbbba;
+    -fx-prompt-text-fill: #5b5b5b;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .user-text-field{
-	-fx-font-size: 32px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-padding: 2 8 2 8;
-	-fx-background-color: #ffbbba;
-	-fx-prompt-text-fill: #5b5b5b;
-	-fx-background-radius: 20px;
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 32px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-padding: 2 8 2 8;
+    -fx-background-color: #ffbbba;
+    -fx-prompt-text-fill: #5b5b5b;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .products-field{
-	-fx-font-size: 30px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-padding: 2 8 2 8;
-	-fx-background-color: #ffbbba;
-	-fx-prompt-text-fill: #5b5b5b;
-	-fx-background-radius: 20px;
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 30px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-padding: 2 8 2 8;
+    -fx-background-color: #ffbbba;
+    -fx-prompt-text-fill: #5b5b5b;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .combo-box{
-	-fx-font-size: 21px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-padding: 2 8 2 8;
-	-fx-border-width: 3px;
-	-fx-border-color: black;
-	-fx-background-color: #fdd060;
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
+    -fx-font-size: 21px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-padding: 2 8 2 8;
+    -fx-border-width: 3px;
+    -fx-border-color: black;
+    -fx-background-color: #fdd060;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
 }
 
 .login-button{
-	-fx-font-size: 21px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #8c0300;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 21px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #8c0300;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .back-button{
-	-fx-font-size: 21px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #eec260;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 21px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #eec260;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .user-info-back-button{
-	-fx-font-size: 32px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #eec260;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 32px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #eec260;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
-.cash-in{ 
-	-fx-font-size: 32px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #8c0300;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+.cash-in{
+    -fx-font-size: 32px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #8c0300;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
-.log-out{ 
-	-fx-font-size: 32px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #8c0300;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+.log-out{
+    -fx-font-size: 32px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #8c0300;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .startSelling-button{
-	-fx-font-size: 26px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #eec260;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 26px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #eec260;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .continue-button{
-	-fx-font-size: 30px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #fdd060;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 30px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #fdd060;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .back-button-main{
-	-fx-font-size: 30px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
-	-fx-background-color: #8c0300;
-	-fx-background-radius: 20px;  
-	-fx-border-color: black;
-	-fx-border-width: 3px;
-	-fx-border-radius: 20px;
+    -fx-font-size: 30px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: #8c0300;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 20px;
 }
 
 .welcome-text{
-	-fx-font-size: 60px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: black;
-	-fx-font-weight: bold;
+    -fx-font-size: 60px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
 }
 
 .user-info-text{
-	-fx-font-size: 38px;
-	-fx-font-family: "Nine By Five NBP";
-	-fx-text-fill: #5b5b5b;
-	-fx-font-weight: bold;
+    -fx-font-size: 38px;
+    -fx-font-family: "Nine By Five NBP";
+    -fx-text-fill: #5b5b5b;
+    -fx-font-weight: bold;
 }
 
 .signup-label{
-	-fx-font-size: 20px;
-	-fx-font-family: "Nine by Five NBP";
-	-fx-text-fill: black;
+    -fx-font-size: 20px;
+    -fx-font-family: "Nine by Five NBP";
+    -fx-text-fill: black;
 }
 
 .signup-link{
-	-fx-font-size: 20px;
-	-fx-font-family: "Nine by Five NBP";
-	-fx-text-fill: #8c0300;
-	-fx-padding: 0 0 0 0;
+    -fx-font-size: 20px;
+    -fx-font-family: "Nine by Five NBP";
+    -fx-text-fill: #8c0300;
+    -fx-padding: 0 0 0 0;
 }
 
 .edit-icon-button {
@@ -322,15 +326,74 @@
 }
 
 .voucher-text {
-    -fx-font-size: 25px; /* adjust size here */
+    -fx-font-size: 25px; 
     -fx-font-family: "Nine By Five NBP"; 
-    -fx-fill: black;     /* text color */
+    -fx-fill: black;    
     -fx-font-weight: bold;
 }
 
-.voucher-icon-button {
-    -fx-background-color: transparent;
+/* --- UPDATED Transaction Table Styling (No Lines, Pixel Art Look) --- */
+
+.transaction-table {
+    -fx-background-color: transparent; 
+    -fx-base: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
     -fx-padding: 0;
-    -fx-cursor: hand;
 }
 
+/* 1. The Header Row */
+.transaction-table .column-header-background {
+    -fx-background-color: #FFB6C1; /* Light Pink */
+    -fx-border-color: black;
+    -fx-border-width: 2px 2px 2px 2px; 
+}
+
+.transaction-table .column-header {
+    -fx-background-color: transparent;
+    -fx-border-width: 0; /* Remove vertical separators */
+}
+
+.transaction-table .column-header .label {
+    -fx-font-family: "Courier New"; 
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+    -fx-alignment: CENTER;
+}
+
+/* 2. The Data Rows */
+.transaction-table .table-row-cell {
+    -fx-background-color: #FFDAB9; /* Peach */
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1px 0; /* Horizontal line at bottom */
+}
+
+/* 3. Text inside the rows */
+.transaction-table .table-cell {
+    -fx-font-family: "Courier New";
+    -fx-font-size: 13px;
+    -fx-text-fill: black;
+    -fx-alignment: CENTER; 
+    -fx-border-width: 0; /* Remove vertical separators */
+}
+
+/* Hide empty rows completely */
+.transaction-table .table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* Remove blue selection highlight */
+.transaction-table .table-row-cell:selected {
+    -fx-background-color: #FFA07A; 
+    -fx-text-fill: black;
+}
+
+/* --- Transaction Screen Background --- */
+.transaction-screen {
+    -fx-background-image: url("images/transactionscreen.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
