@@ -45,6 +45,12 @@
     -fx-background-position: center;
 }
 
+.buyerscreen {
+    -fx-background-image: url("images/buyerscreen.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
 
 .buyerscreen_initial {
     -fx-background-image: url("images/buyerscreen_initial.png");
