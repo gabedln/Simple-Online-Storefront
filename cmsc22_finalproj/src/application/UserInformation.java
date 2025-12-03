@@ -9,13 +9,14 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import user.User;
+import user.*;
 
 public class UserInformation {
     private Scene userInfoScene;
 
-    public UserInformation(Stage stage, Scene previous, User user) {
+    public UserInformation(Stage stage, Scene previous, Scene main, User user) {
         BorderPane root = new BorderPane();
         root.getStyleClass().add("user-info"); // uses user_information.png
 
@@ -27,24 +28,29 @@ public class UserInformation {
         Label displayNameValue = new Label(user.getDisplayName());
         Label usernameValue = new Label("@" + user.getUsername());
         Label locationValue = new Label(user.getLocation());
-        Label accountTypeValue = new Label(user.getAccountType());
+        Label accountTypeValue;
+        if(user instanceof Buyer) {
+        	accountTypeValue = new Label("BUYER");
+        } else {
+        	accountTypeValue = new Label("SELLER");
+        }
         Label balanceValue = new Label("₱" + user.getBalance());
 
-        displayNameValue.getStyleClass().add("info-label");
-        usernameValue.getStyleClass().add("info-label");
-        locationValue.getStyleClass().add("info-label");
-        accountTypeValue.getStyleClass().add("info-label");
-        balanceValue.getStyleClass().add("info-label");
+        displayNameValue.getStyleClass().add("user-info-text");
+        usernameValue.getStyleClass().add("user-info-text");
+        locationValue.getStyleClass().add("user-info-text");
+        accountTypeValue.getStyleClass().add("user-info-text");
+        balanceValue.getStyleClass().add("user-info-text");
 
         // ---------------- Edit Icons ----------------
         Image editIcon = new Image(getClass().getResourceAsStream("/application/images/edit_icon.png"));
         ImageView editNameIcon = new ImageView(editIcon);
-        editNameIcon.setFitHeight(20);
-        editNameIcon.setFitWidth(20);
+        editNameIcon.setFitHeight(45);
+        editNameIcon.setFitWidth(70);
 
         ImageView editLocationIcon = new ImageView(editIcon);
-        editLocationIcon.setFitHeight(20);
-        editLocationIcon.setFitWidth(20);
+        editLocationIcon.setFitHeight(45);
+        editLocationIcon.setFitWidth(70);
 
         Button editNameButton = new Button();
         editNameButton.setGraphic(editNameIcon);
@@ -53,6 +59,39 @@ public class UserInformation {
         Button editLocationButton = new Button();
         editLocationButton.setGraphic(editLocationIcon);
         editLocationButton.getStyleClass().add("edit-icon-button");
+        
+        Button cashin = new Button("cash-in");
+        cashin.getStyleClass().add("cash-in");
+        cashin.setMinWidth(190);
+        
+        Button logout = new Button("log out");
+        logout.getStyleClass().add("log-out");
+        logout.setMinWidth(190);
+        
+        // ---------------- Layout ----------------
+        GridPane grid = new GridPane();
+        grid.setAlignment(Pos.CENTER_LEFT);
+        grid.setVgap(10);
+        grid.setHgap(20);
+        grid.setStyle("-fx-padding: 205 0 0 250;"); // aligns values with background labels
+
+        grid.add(displayNameValue, 0, 0);
+        grid.add(editNameButton, 1, 0);
+
+        grid.add(usernameValue, 0, 1);
+
+        grid.add(locationValue, 0, 2);
+        grid.add(editLocationButton, 1, 2);
+
+        grid.add(accountTypeValue, 0, 3);
+        grid.add(balanceValue, 0, 4);
+
+        Button back = new Button("back");
+        back.getStyleClass().add("user-info-back-button");
+        HBox backButton = new HBox(10, back, cashin, logout);
+        backButton.setStyle("-fx-padding: 0 0 30 215");
+        back.setOnAction(e -> stage.setScene(previous));
+        back.setMinWidth(190);
 
         // ---------------- Edit Actions ----------------
         editNameButton.setOnAction(e -> {
@@ -64,7 +103,7 @@ public class UserInformation {
             confirm.getStyleClass().add("add-button");
             confirm.setOnAction(ev -> {
                 user.setDisplayName(nameField.getText());
-                stage.setScene(new UserInformation(stage, previous, user).getScene());
+                stage.setScene(new UserInformation(stage, previous, main, user).getScene());
             });
 
             GridPane editPane = new GridPane();
@@ -85,7 +124,7 @@ public class UserInformation {
             confirm.getStyleClass().add("add-button");
             confirm.setOnAction(ev -> {
                 user.setLocation(locationField.getText());
-                stage.setScene(new UserInformation(stage, previous, user).getScene());
+                stage.setScene(new UserInformation(stage, previous, main, user).getScene());
             });
 
             GridPane editPane = new GridPane();
@@ -96,31 +135,14 @@ public class UserInformation {
             editPane.add(confirm, 0, 1);
             root.setCenter(editPane);
         });
-
-        // ---------------- Layout ----------------
-        GridPane grid = new GridPane();
-        grid.setAlignment(Pos.CENTER_LEFT);
-        grid.setVgap(15);
-        grid.setHgap(20);
-        grid.setStyle("-fx-padding: 100 0 0 400;"); // aligns values with background labels
-
-        grid.add(displayNameValue, 0, 0);
-        grid.add(editNameButton, 1, 0);
-
-        grid.add(usernameValue, 0, 1);
-
-        grid.add(locationValue, 0, 2);
-        grid.add(editLocationButton, 1, 2);
-
-        grid.add(accountTypeValue, 0, 3);
-        grid.add(balanceValue, 0, 4);
-
-        Button back = new Button("back");
-        back.getStyleClass().add("back-button");
-        back.setOnAction(e -> stage.setScene(previous));
-        grid.add(back, 0, 5);
+        
+        logout.setOnAction(e-> {
+        	Main login = new Main();
+        	stage.setScene(login.getScene());
+        });
 
         root.setCenter(grid);
+        root.setBottom(backButton);
     }
 
     public Scene getScene() {

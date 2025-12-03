@@ -166,6 +166,42 @@
 	-fx-border-radius: 20px;
 }
 
+.user-info-back-button{
+	-fx-font-size: 32px;
+	-fx-font-family: "Nine By Five NBP";
+	-fx-text-fill: black;
+	-fx-font-weight: bold;
+	-fx-background-color: #eec260;
+	-fx-background-radius: 20px;  
+	-fx-border-color: black;
+	-fx-border-width: 3px;
+	-fx-border-radius: 20px;
+}
+
+.cash-in{ 
+	-fx-font-size: 32px;
+	-fx-font-family: "Nine By Five NBP";
+	-fx-text-fill: black;
+	-fx-font-weight: bold;
+	-fx-background-color: #8c0300;
+	-fx-background-radius: 20px;  
+	-fx-border-color: black;
+	-fx-border-width: 3px;
+	-fx-border-radius: 20px;
+}
+
+.log-out{ 
+	-fx-font-size: 32px;
+	-fx-font-family: "Nine By Five NBP";
+	-fx-text-fill: black;
+	-fx-font-weight: bold;
+	-fx-background-color: #8c0300;
+	-fx-background-radius: 20px;  
+	-fx-border-color: black;
+	-fx-border-width: 3px;
+	-fx-border-radius: 20px;
+}
+
 .startSelling-button{
 	-fx-font-size: 26px;
 	-fx-font-family: "Nine By Five NBP";
@@ -206,6 +242,13 @@
 	-fx-font-size: 60px;
 	-fx-font-family: "Nine By Five NBP";
 	-fx-text-fill: black;
+	-fx-font-weight: bold;
+}
+
+.user-info-text{
+	-fx-font-size: 38px;
+	-fx-font-family: "Nine By Five NBP";
+	-fx-text-fill: #5b5b5b;
 	-fx-font-weight: bold;
 }
 

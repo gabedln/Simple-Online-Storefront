@@ -17,7 +17,7 @@ public class BuyerScreen {
 
 	private Scene buyerScene;
 
-	public BuyerScreen(Stage stage, Buyer buyer) {
+	public BuyerScreen(Stage stage, Scene main, Buyer buyer) {
 		BorderPane root = new BorderPane();
 		
 		Image userIcon = new Image(getClass().getResourceAsStream("/application/images/user_icon.png"));

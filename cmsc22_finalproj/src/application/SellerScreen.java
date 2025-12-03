@@ -17,7 +17,7 @@ public class SellerScreen {
 	
 	private Scene sellerScene;
 	
-	public SellerScreen(Stage stage, Seller seller) {
+	public SellerScreen(Stage stage, Scene main, Seller seller) {
 		Image userIcon = new Image(getClass().getResourceAsStream("/application/images/user_icon.png"));
 		ImageView usericon = new ImageView(userIcon);
 		usericon.setFitHeight(45);
@@ -28,7 +28,7 @@ public class SellerScreen {
 		userButton.setStyle("-fx-background-color: transparent; -fx-padding: 10 0 0 960;");
 		userButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
 			public void handle(MouseEvent arg0) {
-				UserInformation userInfo = new UserInformation(stage, sellerScene, (User)seller);
+				UserInformation userInfo = new UserInformation(stage, sellerScene, main, (User)seller);
 				stage.setScene(userInfo.getScene());
 			}
 		});
