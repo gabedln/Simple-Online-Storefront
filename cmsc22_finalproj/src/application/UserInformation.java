@@ -135,7 +135,7 @@ public class UserInformation {
         });
         
         logout.setOnAction(e-> {
-        	stage.setScene(Main.getLoginScene());
+        	Main.logout(stage);
         });
 
         root.setCenter(grid);
