@@ -82,6 +82,7 @@ public class ViewVoucher {
 
         Button addVoucherButton = new Button();
         addVoucherButton.setGraphic(addVoucherView);
+        addVoucherButton.setStyle("-fx-background-color: transparent");
         addVoucherButton.getStyleClass().add("icon-button");
         addVoucherButton.setOnAction(e -> {
             AddVoucher addVoucher = new AddVoucher(stage, scene, seller);

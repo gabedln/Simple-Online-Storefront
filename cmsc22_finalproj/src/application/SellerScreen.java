@@ -58,7 +58,7 @@ public class SellerScreen {
 		Button voucherButton = new Button();
 		voucherButton.setGraphic(vouchericon);
 		voucherButton.setStyle("-fx-background-color: transparent;");
-		homeButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+		voucherButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
 			public void handle(MouseEvent arg0) {
 				ViewVoucher sellerVouchers = new ViewVoucher(stage, sellerScene, seller);
 				stage.setScene(sellerVouchers.getScene());
