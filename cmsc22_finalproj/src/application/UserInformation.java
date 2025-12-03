@@ -113,6 +113,11 @@ public class UserInformation {
             editPane.setStyle("-fx-padding: 14 0 0 220;");
             root.setCenter(editPane);
         });
+        
+        cashin.setOnAction(e-> {
+        	AddBalance balance = new AddBalance(stage, userInfoScene, (Buyer)user);
+        	stage.setScene(balance.getScene());
+        });
 
         editLocationButton.setOnAction(e -> {
             TextField locationField = new TextField();
