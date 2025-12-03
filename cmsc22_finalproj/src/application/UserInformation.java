@@ -97,42 +97,40 @@ public class UserInformation {
         editNameButton.setOnAction(e -> {
             TextField nameField = new TextField();
             nameField.setPromptText("Enter new display name");
-            nameField.getStyleClass().add("text-field");
+            nameField.getStyleClass().add("user-text-field");
+            nameField.setMinWidth(350);
 
             Button confirm = new Button("confirm");
-            confirm.getStyleClass().add("add-button");
+            confirm.getStyleClass().add("confirm-button");
             confirm.setOnAction(ev -> {
                 user.setDisplayName(nameField.getText());
+                Main.saveData();
                 stage.setScene(new UserInformation(stage, previous, user).getScene());
             });
 
-            GridPane editPane = new GridPane();
+            HBox editPane = new HBox(5, nameField, confirm);
             editPane.setAlignment(Pos.CENTER_LEFT);
-            editPane.setVgap(10);
-            editPane.setStyle("-fx-padding: 100 0 0 100;");
-            editPane.add(nameField, 0, 0);
-            editPane.add(confirm, 0, 1);
+            editPane.setStyle("-fx-padding: 14 0 0 220;");
             root.setCenter(editPane);
         });
 
         editLocationButton.setOnAction(e -> {
             TextField locationField = new TextField();
             locationField.setPromptText("Enter new location");
-            locationField.getStyleClass().add("text-field");
+            locationField.getStyleClass().add("user-text-field");
+            locationField.setMinWidth(350);
 
             Button confirm = new Button("confirm");
-            confirm.getStyleClass().add("add-button");
+            confirm.getStyleClass().add("confirm-button");
             confirm.setOnAction(ev -> {
                 user.setLocation(locationField.getText());
+                Main.saveData();
                 stage.setScene(new UserInformation(stage, previous, user).getScene());
             });
 
-            GridPane editPane = new GridPane();
+            HBox editPane = new HBox(5, locationField, confirm);
             editPane.setAlignment(Pos.CENTER_LEFT);
-            editPane.setVgap(10);
-            editPane.setStyle("-fx-padding: 100 0 0 100;");
-            editPane.add(locationField, 0, 0);
-            editPane.add(confirm, 0, 1);
+            editPane.setStyle("-fx-padding: 210 0 0 220;");
             root.setCenter(editPane);
         });
         
