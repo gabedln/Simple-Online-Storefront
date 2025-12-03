@@ -2,7 +2,6 @@
 	src: url(fonts/nine0.ttf);
 }
 
-/* --- SELLER & STOREFRONT STYLES --- */
 .seller-storefront {
     -fx-background-image: url("images/background_seller_storefront.png");
     -fx-background-size: cover;
@@ -86,8 +85,6 @@
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
 }
-
-/* --- BUTTONS & FIELDS --- */
 
 .product-back-button{
     -fx-font-size: 26px;
@@ -332,8 +329,6 @@
     -fx-font-weight: bold;
 }
 
-/* --- UPDATED Transaction Table Styling (No Lines, Pixel Art Look) --- */
-
 .transaction-table {
     -fx-background-color: transparent; 
     -fx-base: transparent;
@@ -342,16 +337,15 @@
     -fx-padding: 0;
 }
 
-/* 1. The Header Row */
 .transaction-table .column-header-background {
-    -fx-background-color: #FFB6C1; /* Light Pink */
+    -fx-background-color: #FFB6C1; 
     -fx-border-color: black;
     -fx-border-width: 2px 2px 2px 2px; 
 }
 
 .transaction-table .column-header {
     -fx-background-color: transparent;
-    -fx-border-width: 0; /* Remove vertical separators */
+    -fx-border-width: 0; 
 }
 
 .transaction-table .column-header .label {
@@ -362,35 +356,30 @@
     -fx-alignment: CENTER;
 }
 
-/* 2. The Data Rows */
 .transaction-table .table-row-cell {
-    -fx-background-color: #FFDAB9; /* Peach */
+    -fx-background-color: #FFDAB9; 
     -fx-border-color: black;
-    -fx-border-width: 0 0 1px 0; /* Horizontal line at bottom */
+    -fx-border-width: 0 0 1px 0; 
 }
 
-/* 3. Text inside the rows */
 .transaction-table .table-cell {
     -fx-font-family: "Courier New";
     -fx-font-size: 13px;
     -fx-text-fill: black;
     -fx-alignment: CENTER; 
-    -fx-border-width: 0; /* Remove vertical separators */
+    -fx-border-width: 0; 
 }
 
-/* Hide empty rows completely */
 .transaction-table .table-row-cell:empty {
     -fx-background-color: transparent;
     -fx-border-width: 0;
 }
 
-/* Remove blue selection highlight */
 .transaction-table .table-row-cell:selected {
     -fx-background-color: #FFA07A; 
     -fx-text-fill: black;
 }
 
-/* --- Transaction Screen Background --- */
 .transaction-screen {
     -fx-background-image: url("images/transactionscreen.png");
     -fx-background-size: cover;
