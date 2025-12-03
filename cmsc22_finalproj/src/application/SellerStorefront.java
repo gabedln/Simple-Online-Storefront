@@ -62,7 +62,7 @@ public class SellerStorefront {
         bottomBox.setStyle("-fx-padding: 15;");
         root.setBottom(bottomBox);
 
-        scene = new Scene(root, 1024, 576);
+        this.scene = new Scene(root, 1024, 576);
         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
     }
 
@@ -198,7 +198,6 @@ public class SellerStorefront {
         }
     }
 
-    public Scene getScene() {
-        return scene;
-    }
+    public Scene getScene() { return scene; }
+   
 }

@@ -112,7 +112,7 @@ public class SellerScreen {
             root.setTop(topIcons);
         } else {
             // Products exist - go directly to storefront
-            SellerStorefront storefront = new SellerStorefront(stage, main, seller);
+            SellerStorefront storefront = new SellerStorefront(stage, sellerScene, seller);
             stage.setScene(storefront.getScene());
             return;
         }
