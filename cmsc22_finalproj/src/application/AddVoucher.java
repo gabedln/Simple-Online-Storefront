@@ -92,7 +92,7 @@ public class AddVoucher {
                 }
 
                 if(cap > min){
-                    ("Poor voucher logic. Cap amount is must ideally not exceed minimum purchase amount.");
+                    showError("Poor voucher logic. Cap amount is must ideally not exceed minimum purchase amount.");
                     return;
                 }
 
@@ -148,5 +148,13 @@ public class AddVoucher {
 
     public Scene getScene() {
         return this.addVoucher;
+    }
+
+    private void showError(String message) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Invalid Input");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }
