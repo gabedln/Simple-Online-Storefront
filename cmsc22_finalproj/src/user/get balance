@@ -48,6 +48,10 @@ public class Seller extends User {
         if (transaction != null) transactions.add(transaction);
     }
 
+    public void getBalance() { return this.balance; }
+
+    public void setBalance(float newBalance) { this.balance = balance; }
+
     public ArrayList<TransactionHistory> getTransactions() { return transactions; }
 
     // Lists
