@@ -31,23 +31,18 @@ public class TransactionScreen {
     public TransactionScreen(Stage stage, Scene previousScene, User currentUser, List<TransactionHistory> historyList) {
         BorderPane root = new BorderPane();
         
-        //Top Navigation Bar
         VBox topBar = createTopBar(stage, previousScene, currentUser);
         root.setTop(topBar);
 
-        //Title
         Label titleLabel = new Label("Transaction Log");
         titleLabel.setStyle("-fx-font-family: 'Courier New', monospace; -fx-font-weight: bold; -fx-font-size: 28px; -fx-text-fill: black;");
 
-        //The Table View 
         TableView<TransactionHistory> table = new TableView<>();
         
-        //Remove "No content in table" text
         table.setPlaceholder(new Label("")); 
         
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
 
-        //Define Columns
         TableColumn<TransactionHistory, String> userCol = new TableColumn<>("User's name");
         userCol.setCellValueFactory(cellData -> 
             new SimpleStringProperty(cellData.getValue().getBuyer().getDisplayName())
@@ -83,7 +78,6 @@ public class TransactionScreen {
 
         table.getStyleClass().add("transaction-table");
 
-        //Layout
         VBox centerContent = new VBox(15, titleLabel, table);
         VBox.setVgrow(table, Priority.ALWAYS);
         centerContent.setPadding(new Insets(10, 80, 50, 80));
@@ -107,12 +101,10 @@ public class TransactionScreen {
         Button wishBtn = createIcon("wishlist_icon.png");
         Button cartBtn = createIcon("cart_icon.png");
 
-        //User Icon
         ImageView userView = new ImageView(new Image(getClass().getResourceAsStream("/application/images/user_icon.png")));
         userView.setFitHeight(45); userView.setFitWidth(45);
         Button userBtn = new Button("", userView);
         
-        //Match BuyerScreen user button padding
         userBtn.setStyle("-fx-background-color: transparent; -fx-padding: 0 0 0 325;");
 
         userBtn.setOnMouseClicked(e -> {
@@ -123,7 +115,6 @@ public class TransactionScreen {
         //Actions
         homeBtn.setOnMouseClicked(e -> stage.setScene(prev));
 
-        //Layout (Matching BuyerScreen Padding)
         HBox icons = new HBox(18, transBtn, homeBtn, voucherBtn, wishBtn, cartBtn);
         VBox topIcons = new VBox(10, userBtn, icons);
         topIcons.setStyle("-fx-padding: 5 0 0 630");
