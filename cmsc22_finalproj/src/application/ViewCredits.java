@@ -23,14 +23,12 @@ public class ViewCredits {
         HBox topBar = new HBox(backButton);
         topBar.setAlignment(Pos.TOP_LEFT);
 
-        // Fullscreen background image
         Image creditsImage = new Image(getClass().getResourceAsStream("/application/images/credits.png"));
         ImageView creditsView = new ImageView(creditsImage);
         creditsView.setFitWidth(1024);
         creditsView.setFitHeight(576);
         creditsView.setPreserveRatio(false);
 
-        // StackPane to layer back button above image
         StackPane layered = new StackPane(creditsView, topBar);
         StackPane.setAlignment(topBar, Pos.TOP_LEFT);
 
