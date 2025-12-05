@@ -89,25 +89,27 @@ public class Buyer extends User {
         System.out.println("Overall total: ₱" + overallTotal);
     }
 
-    public boolean processBuy(ArrayList<Product> products) {
+    public boolean buy(ArrayList<Product> products, boolean applyVouchers) {
     if (!checkStock(products)) {
         System.out.println("Insufficient stock for one or more products.");
         return false;
     }
 
-    HashMap<Seller, Float> discountedTotals = calculateDiscountedTotals(products);
+    HashMap<Seller, Float> totals;
+        if(applyVoucher){
+            totals = calculateDiscountedTotals(products);
+        } else{
+            totals = calculateTotals(products);
+        }
 
     float grandTotal = 0f;
-    for (Float sellerTotal : discountedTotals.values()) {
+    for (Float sellerTotal : totals.values()) {
         grandTotal += sellerTotal;
     }
 
-    if (!finalizeCheckout(grandTotal, discountedTotals, products)) {
-        System.out.println("Insufficient balance. Needed: ₱" + grandTotal);
+    if (!finalizeCheckout(grandTotal, totals, products)) {
         return false;
     }
-
-    System.out.println("Checkout successful! Total paid: ₱" + grandTotal);
     return true;
 }
 
@@ -162,7 +164,21 @@ private HashMap<Seller, Float> calculateDiscountedTotals(ArrayList<Product> prod
     return discountedTotals;
 }
 
-private boolean finalizeCheckout(float grandTotal, HashMap<Seller, Float> discountedTotals, ArrayList<Product> products) {
+private HashMap<Seller, Float> calculateTotals(ArrayList<Product> products) {
+    HashMap<Seller, Float> sellerTotals = new HashMap<>();
+
+    for(Product product : products){
+        int quantity = cart.getOrDefault(product,0);
+        Seller seller = product.getSeller();
+        float subtotal = product.getPrice() * quantity;
+        sellerTotals.put(seller, sellerTotals.getOrDefault(seller, 0f) + subtotal);
+    }
+
+    return sellerTotals;
+}
+
+
+private boolean finalizeCheckout(float grandTotal, HashMap<Seller, Float> sellerTotals, ArrayList<Product> products) {
     if (getBalance() < grandTotal) {
         return false;
     }
@@ -173,7 +189,7 @@ private boolean finalizeCheckout(float grandTotal, HashMap<Seller, Float> discou
         int quantity = cart.getOrDefault(product, 0);
         Seller seller = product.getSeller();
 
-        float sellerTotal = discountedTotals.getOrDefault(seller, 0f);
+        float sellerTotal = sellerTotals.getOrDefault(seller, 0f);
         seller.setBalance(seller.getBalance() + sellerTotal);
 
         product.setStock(product.getStock() - quantity);
